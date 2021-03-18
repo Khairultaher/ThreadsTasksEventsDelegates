@@ -1,0 +1,16 @@
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\bin\Debug\net5.0\ThreadsTasks.exe
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\bin\Debug\net5.0\ThreadsTasks.deps.json
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\bin\Debug\net5.0\ThreadsTasks.runtimeconfig.json
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\bin\Debug\net5.0\ThreadsTasks.runtimeconfig.dev.json
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\bin\Debug\net5.0\ThreadsTasks.dll
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\bin\Debug\net5.0\ref\ThreadsTasks.dll
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\bin\Debug\net5.0\ThreadsTasks.pdb
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\obj\Debug\net5.0\ThreadsTasks.csprojAssemblyReference.cache
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\obj\Debug\net5.0\ThreadsTasks.GeneratedMSBuildEditorConfig.editorconfig
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\obj\Debug\net5.0\ThreadsTasks.AssemblyInfoInputs.cache
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\obj\Debug\net5.0\ThreadsTasks.AssemblyInfo.cs
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\obj\Debug\net5.0\ThreadsTasks.csproj.CoreCompileInputs.cache
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\obj\Debug\net5.0\ThreadsTasks.dll
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\obj\Debug\net5.0\ref\ThreadsTasks.dll
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\obj\Debug\net5.0\ThreadsTasks.pdb
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadsTasks\obj\Debug\net5.0\ThreadsTasks.genruntimeconfig.cache

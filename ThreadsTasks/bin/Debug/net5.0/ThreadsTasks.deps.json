@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ThreadsTasks/1.0.0": {
+        "runtime": {
+          "ThreadsTasks.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ThreadsTasks/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
