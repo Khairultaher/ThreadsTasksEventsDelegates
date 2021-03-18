@@ -1,0 +1,16 @@
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\bin\Debug\net5.0\EventsDelegates.exe
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\bin\Debug\net5.0\EventsDelegates.deps.json
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\bin\Debug\net5.0\EventsDelegates.runtimeconfig.json
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\bin\Debug\net5.0\EventsDelegates.runtimeconfig.dev.json
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\bin\Debug\net5.0\EventsDelegates.dll
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\bin\Debug\net5.0\ref\EventsDelegates.dll
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\bin\Debug\net5.0\EventsDelegates.pdb
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\obj\Debug\net5.0\EventsDelegates.GeneratedMSBuildEditorConfig.editorconfig
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\obj\Debug\net5.0\EventsDelegates.AssemblyInfoInputs.cache
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\obj\Debug\net5.0\EventsDelegates.AssemblyInfo.cs
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\obj\Debug\net5.0\EventsDelegates.csproj.CoreCompileInputs.cache
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\obj\Debug\net5.0\EventsDelegates.dll
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\obj\Debug\net5.0\ref\EventsDelegates.dll
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\obj\Debug\net5.0\EventsDelegates.pdb
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\obj\Debug\net5.0\EventsDelegates.genruntimeconfig.cache
+E:\PRACTICE\ThreadsTasksEventsDelegates\EventsDelegates\obj\Debug\net5.0\EventsDelegates.csprojAssemblyReference.cache
