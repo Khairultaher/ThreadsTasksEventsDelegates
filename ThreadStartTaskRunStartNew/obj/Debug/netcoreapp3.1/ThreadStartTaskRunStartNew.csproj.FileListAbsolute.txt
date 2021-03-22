@@ -1,0 +1,13 @@
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\bin\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.exe
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\bin\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.deps.json
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\bin\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.runtimeconfig.json
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\bin\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.runtimeconfig.dev.json
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\bin\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.dll
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\bin\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.pdb
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\obj\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.csprojAssemblyReference.cache
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\obj\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.AssemblyInfoInputs.cache
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\obj\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.AssemblyInfo.cs
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\obj\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.csproj.CoreCompileInputs.cache
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\obj\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.dll
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\obj\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.pdb
+E:\PRACTICE\ThreadsTasksEventsDelegates\ThreadStartTaskRunStartNew\obj\Debug\netcoreapp3.1\ThreadStartTaskRunStartNew.genruntimeconfig.cache
