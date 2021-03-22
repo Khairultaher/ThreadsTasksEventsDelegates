@@ -14,63 +14,40 @@ namespace ThreadStartTaskRunStartNew
             var maleCustomers = new List<Customer>();
             var femaleCustomers = new List<Customer>();
 
-
-
             #region Sync Call
             var start = DateTime.Now;
-            repository.RunProcess("Sync Call 1");
-            repository.RunProcess("Sync Call 2");
+            repository.RunThreeSecondLongProcess("  Sync Call 1");
+            repository.RunThreeSecondLongProcess("  Sync Call 2");
 
             var end = DateTime.Now;
             TimeSpan totalTime = end.Subtract(start);
-            Console.WriteLine($"Sync Call takes : {totalTime.TotalSeconds}");
+            Console.WriteLine($"(2) Sync Call takes : {totalTime.TotalSeconds} sec");
             #endregion
-
             Console.WriteLine($"================================================");
-           
+            
             #region Async Call
             start = DateTime.Now;
 
-            var async1 =  repository.RunProcessAsync("Async Call 1");
-            var async2 = repository.RunProcessAsync("Async Call 2");
+            var async1 =  repository.RunThreeSecondLongProcessAsync("  Async Call 1");
+            var async2 = repository.RunThreeSecondLongProcessAsync("  Async Call 2");
 
             await Task.WhenAll(new List<Task> { async1, async2 });
             end = DateTime.Now;
             totalTime = end.Subtract(start);
-            Console.WriteLine($"Async Call takes : {totalTime.TotalSeconds}");
+            Console.WriteLine($"(2) Async Call takes : {totalTime.TotalSeconds} sec");
             #endregion
-
-            Console.WriteLine($"================================================");
-           
-            #region Call with Task.Factory.StartNew
-            start = DateTime.Now;
-
-            var task1 = Task.Factory.StartNew(() => {
-                repository.RunProcess("Call with Task.Factory.StartNew 1"); 
-            });
-            var task2 = Task.Factory.StartNew(() => {
-                repository.RunProcess("Call with Task.Factory.StartNew 2");
-            });
-
-            await Task.WhenAll(new List<Task> { task1, task2 });
-
-            end = DateTime.Now;
-            totalTime = end.Subtract(start);
-            Console.WriteLine($"Call with Task.Factory.StartNew takes : {totalTime.TotalSeconds}");
-            #endregion
-
-            Console.WriteLine($"================================================");
+            Console.WriteLine($"================================================");           
            
             #region Call with new Thread
             start = DateTime.Now;
 
             var thread1 = new Thread(() => {
-                repository.RunProcess("Call with new Thread 1");
+                repository.RunThreeSecondLongProcess("  Call with new Thread 1");
             });
             thread1.Start();
 
             var thread2 = new Thread(() => {
-                repository.RunProcess("Call with new Thread 2");
+                repository.RunThreeSecondLongProcess("  Call with new Thread 2");
             });
             thread2.Start();
 
@@ -79,9 +56,26 @@ namespace ThreadStartTaskRunStartNew
 
             end = DateTime.Now;
             totalTime = end.Subtract(start);
-            Console.WriteLine($"Call with new Thread takes : {totalTime.TotalSeconds}");
+            Console.WriteLine($"(2) Call with new Thread takes : {totalTime.TotalSeconds} sec");
             #endregion
+            Console.WriteLine($"================================================");
+           
+            #region Call with Task.Factory.StartNew
+            start = DateTime.Now;
 
+            var task1 = Task.Factory.StartNew(() => {
+                repository.RunThreeSecondLongProcess("  Call with Task.Factory.StartNew 1");
+            });
+            var task2 = Task.Factory.StartNew(() => {
+                repository.RunThreeSecondLongProcess("  Call with Task.Factory.StartNew 2");
+            });
+
+            await Task.WhenAll(new List<Task> { task1, task2 });
+
+            end = DateTime.Now;
+            totalTime = end.Subtract(start);
+            Console.WriteLine($"(2) Call with Task.Factory.StartNew takes : {totalTime.TotalSeconds} sec");
+            #endregion
             Console.ReadLine();
         }
     }
@@ -107,14 +101,14 @@ namespace ThreadStartTaskRunStartNew
             };
         }
 
-        public void RunProcess(string from)
+        public void RunThreeSecondLongProcess(string from)
         {
 
             Thread.Sleep(3000);
             Console.WriteLine($"{from}");
         }
 
-        public async Task RunProcessAsync(string from)
+        public async Task RunThreeSecondLongProcessAsync(string from)
         {
             await Task.Delay(3000);
             Console.WriteLine($"{from}");
