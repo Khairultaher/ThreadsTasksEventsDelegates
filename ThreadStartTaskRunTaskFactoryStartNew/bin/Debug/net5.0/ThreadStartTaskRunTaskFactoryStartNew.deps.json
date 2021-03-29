@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ThreadStartTaskRunTaskFactoryStartNew/1.0.0": {
+        "runtime": {
+          "ThreadStartTaskRunTaskFactoryStartNew.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ThreadStartTaskRunTaskFactoryStartNew/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
