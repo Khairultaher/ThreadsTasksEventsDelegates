@@ -10,9 +10,11 @@ namespace ThreadStartTaskRunStartNew
     {
         static async Task Main(string[] args)
         {
+            #region Repository&Variable
             CustomerRepository repository = new CustomerRepository();
             var maleCustomers = new List<Customer>();
             var femaleCustomers = new List<Customer>();
+            #endregion
 
             #region Sync Call
             var start = DateTime.Now;
@@ -22,9 +24,10 @@ namespace ThreadStartTaskRunStartNew
             var end = DateTime.Now;
             TimeSpan totalTime = end.Subtract(start);
             Console.WriteLine($"(2) Sync Call takes : {totalTime.TotalSeconds} sec");
-            #endregion
+
             Console.WriteLine($"================================================");
-            
+            #endregion
+
             #region Async Call
             start = DateTime.Now;
 
@@ -35,9 +38,10 @@ namespace ThreadStartTaskRunStartNew
             end = DateTime.Now;
             totalTime = end.Subtract(start);
             Console.WriteLine($"(2) Async Call takes : {totalTime.TotalSeconds} sec");
+
+            Console.WriteLine($"================================================");
             #endregion
-            Console.WriteLine($"================================================");           
-           
+
             #region Call with new Thread
             start = DateTime.Now;
 
@@ -57,9 +61,10 @@ namespace ThreadStartTaskRunStartNew
             end = DateTime.Now;
             totalTime = end.Subtract(start);
             Console.WriteLine($"(2) Call with new Thread takes : {totalTime.TotalSeconds} sec");
-            #endregion
+
             Console.WriteLine($"================================================");
-           
+            #endregion
+
             #region Call with Task.Factory.StartNew
             start = DateTime.Now;
 
@@ -76,6 +81,7 @@ namespace ThreadStartTaskRunStartNew
             totalTime = end.Subtract(start);
             Console.WriteLine($"(2) Call with Task.Factory.StartNew takes : {totalTime.TotalSeconds} sec");
             #endregion
+            
             Console.ReadLine();
         }
     }
