@@ -10,16 +10,16 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("### Here three method call takes 3+3+4 sec ###");
+            Console.WriteLine("### Here three method call takes 4+3+3 sec ###");
           
             CustomerRepository repository = new CustomerRepository();
 
             #region Sync Call
             var start = DateTime.Now;
 
-            var sync1 = await repository.GetCustomersAsync(" Sync1", "M");
+            var sync1 = await repository.GetCustomersAsync(" Sync1");
             var sync2 = await repository.GetCustomersAsync(" Sync2", "F");
-            var sync3 = await repository.GetCustomersAsync(" Sync3");
+            var sync3 = await repository.GetCustomersAsync(" Sync3", "M");
 
             var end = DateTime.Now;
             TimeSpan totalTime = end.Subtract(start);
@@ -33,9 +33,9 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
             #region Async Call
             start = DateTime.Now;
 
-            var async1 = repository.GetCustomersAsync(" Async1", "M");
+            var async1 = repository.GetCustomersAsync(" Async1");
             var async2 = repository.GetCustomersAsync(" Async2", "F");
-            var async3 = repository.GetCustomersAsync(" Async3");
+            var async3 = repository.GetCustomersAsync(" Async3", "M");
 
             await Task.WhenAll(new List<Task> { async1, async2, async3 });
             end = DateTime.Now;
@@ -52,7 +52,7 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
 
             var maleCustomers = new List<Customer>();
             var thread1 = new Thread(() => {
-                maleCustomers = repository.GetCustomersAsync(" Thread1","M").Result;
+                maleCustomers = repository.GetCustomersAsync(" Thread1").Result;
             });
             thread1.Start();
 
@@ -64,7 +64,7 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
 
             var threadcustomers = new List<Customer>();
             var thread3 = new Thread(() => {
-                threadcustomers = repository.GetCustomersAsync(" Thread3").Result;
+                threadcustomers = repository.GetCustomersAsync(" Thread3", "M").Result;
             });
             thread3.Start();
 
@@ -85,7 +85,7 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
             start = DateTime.Now;
 
             var task1 =  Task.Factory.StartNew(() => {
-                return  repository.GetCustomersAsync(" Task1","M");
+                return  repository.GetCustomersAsync(" Task1");
             }).Unwrap();
 
             var task2 = Task.Factory.StartNew(() => {
@@ -93,7 +93,7 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
             }).Unwrap();
 
             var task3 = Task.Factory.StartNew(() => {
-                return repository.GetCustomersAsync(" Task3");
+                return repository.GetCustomersAsync(" Task3", "M");
             }).Unwrap();
 
             await Task.WhenAll(new List<Task> { task1, task2, task3 });
@@ -101,7 +101,7 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
             end = DateTime.Now;
             totalTime = end.Subtract(start);
 
-            var taskcustomers = task1.Result.Concat(task1.Result).Concat(task3.Result).ToList();
+            var taskcustomers = task1.Result.Concat(task2.Result).Concat(task3.Result).ToList();
             Console.WriteLine($"(3) Call with (3) Task.Factory.StartNew takes : {totalTime.TotalSeconds} sec with data({taskcustomers.Count})");
             #endregion
 
