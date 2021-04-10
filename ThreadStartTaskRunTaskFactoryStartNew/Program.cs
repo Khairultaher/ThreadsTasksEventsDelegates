@@ -57,8 +57,8 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
             thread1.Start();
 
             var femaleCustomers = new List<Customer>();
-            var thread2 = new Thread( () => {
-                femaleCustomers =  repository.GetCustomersAsync(" Thread2","F").Result;
+            var thread2 = new Thread(() => {
+                femaleCustomers = repository.GetCustomersAsync(" Thread2","F").Result;
             });
             thread2.Start();
 
@@ -85,7 +85,7 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
             start = DateTime.Now;
 
             var task1 =  Task.Factory.StartNew(() => {
-                return  repository.GetCustomersAsync(" Task1");
+                return  Task.FromResult(repository.GetCustomers(" Task1"));
             }).Unwrap();
 
             var task2 = Task.Factory.StartNew(() => {
@@ -143,18 +143,11 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
             Console.WriteLine($"{from}");
         }
 
-        public List<Customer> GetCustomers(string gender)
-        {
-
-            Thread.Sleep(3000);
-            return customers.Where(w => w.Gender == gender).ToList();
-        }
-
-        public async Task<List<Customer>> GetCustomersAsync(string caller, string gender)
+        public List<Customer> GetCustomers(string caller)
         {
             Console.WriteLine($"{caller} start running...");
-            await Task.Delay(3000);
-            return customers.Where(w => w.Gender == gender).ToList();
+            Thread.Sleep(3000);
+            return customers.ToList();
         }
         public async Task<List<Customer>> GetCustomersAsync(string caller)
         {
@@ -162,6 +155,13 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
             await Task.Delay(4000);
             return customers.ToList();
         }
+        public async Task<List<Customer>> GetCustomersAsync(string caller, string gender)
+        {
+            Console.WriteLine($"{caller} start running...");
+            await Task.Delay(3000);
+            return customers.Where(w => w.Gender == gender).ToList();
+        }
+
     }
     public class Customer
     {
