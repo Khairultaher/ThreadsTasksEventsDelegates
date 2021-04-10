@@ -17,9 +17,9 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
             #region Sync Call
             var start = DateTime.Now;
 
-            var sync1 = await repository.GetCustomersAsync(" Sync1");
-            var sync2 = await repository.GetCustomersAsync(" Sync2", "F");
-            var sync3 = await repository.GetCustomersAsync(" Sync3", "M");
+            var sync1 = repository.GetCustomers(" Sync1");
+            var sync2 = repository.GetCustomersAsync(" Sync2", "F").Result;
+            var sync3 = repository.GetCustomers(" Sync3", "M");
 
             var end = DateTime.Now;
             TimeSpan totalTime = end.Subtract(start);
@@ -146,8 +146,15 @@ namespace ThreadStartTaskRunTaskFactoryStartNew
         public List<Customer> GetCustomers(string caller)
         {
             Console.WriteLine($"{caller} start running...");
-            Thread.Sleep(3000);
+            Thread.Sleep(4000);
             return customers.ToList();
+        }
+
+        public List<Customer> GetCustomers(string caller, string gender)
+        {
+            Console.WriteLine($"{caller} start running...");
+            Thread.Sleep(3000);
+            return customers.Where(w => w.Gender == gender).ToList();
         }
         public async Task<List<Customer>> GetCustomersAsync(string caller)
         {
