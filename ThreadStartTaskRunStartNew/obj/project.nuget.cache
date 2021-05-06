@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+yC+V51ASsq2Q1TUBYc8ww15BidymGFXvQzhcDbQePR45qsIL433BiWPeFBlDyz/Qi1iM1MyZoI4+BDZsHrboQ==",
+  "dgSpecHash": "xJy23ZxhKn1lOolpVIMGWGn4Ooll0ujt/cClcytor0DcuGGCSzpTB/LifMnLHMaxtJ7L+7QukLWv42RJUqAM7Q==",
   "success": true,
   "projectFilePath": "E:\\PRACTICE\\ThreadsTasksEventsDelegates\\ThreadStartTaskRunStartNew\\ThreadStartTaskRunStartNew.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Khairul\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.12\\microsoft.netcore.app.host.win-x64.3.1.12.nupkg.sha512"
+  ],
   "logs": []
 }

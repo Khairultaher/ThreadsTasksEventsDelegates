@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskRunVsTaskFactoryStartNe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadStartTaskRunTaskFactoryStartNew", "ThreadStartTaskRunTaskFactoryStartNew\ThreadStartTaskRunTaskFactoryStartNew.csproj", "{E3421360-2367-4EFD-927D-B4397C5F7D0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskRunVsAsyncAwait", "TaskRunVsAsyncAwait\TaskRunVsAsyncAwait.csproj", "{13BC0B55-BA4C-4864-BCCA-B95AD28035C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskRunVsAsyncAwait", "TaskRunVsAsyncAwait\TaskRunVsAsyncAwait.csproj", "{13BC0B55-BA4C-4864-BCCA-B95AD28035C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Delegates.csproj", "{E7DBF43F-09CF-4669-964D-C06FA52F4DFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{13BC0B55-BA4C-4864-BCCA-B95AD28035C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13BC0B55-BA4C-4864-BCCA-B95AD28035C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13BC0B55-BA4C-4864-BCCA-B95AD28035C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7DBF43F-09CF-4669-964D-C06FA52F4DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7DBF43F-09CF-4669-964D-C06FA52F4DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7DBF43F-09CF-4669-964D-C06FA52F4DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7DBF43F-09CF-4669-964D-C06FA52F4DFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
