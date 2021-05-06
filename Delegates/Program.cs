@@ -6,9 +6,8 @@ namespace Delegates
     {
         static void Main(string[] args)
         {
-            DelClass delClass = new DelClass();
-            delClass.LogRunningProc(CallBackMethod);
-
+            DelegateExample delexample = new DelegateExample();
+            delexample.LogRunningProc(CallBackMethod);
             Console.ReadLine();
         }
 
@@ -18,7 +17,7 @@ namespace Delegates
         }
     }
 
-    public class DelClass 
+    public class DelegateExample
     {
         public delegate void CallBackDel(int num);
         public void LogRunningProc(CallBackDel callBack)
