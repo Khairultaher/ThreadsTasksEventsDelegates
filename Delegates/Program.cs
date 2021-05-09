@@ -7,7 +7,16 @@ namespace Delegates
         static void Main(string[] args)
         {
             DelegateExample delexample = new DelegateExample();
-            delexample.LogRunningProc(CallBackMethod);
+
+            // Example: Delegate
+            //delexample.LogRunningProc(CallBackMethod);
+
+            // Example: Event
+            delexample.Publisher += Subscriber1;
+            delexample.Publisher += Subscriber2;
+            // delexample.publisher = null; // not possible will throw exception.
+            delexample.LogRunningProc();
+
             Console.ReadLine();
         }
 
@@ -15,16 +24,35 @@ namespace Delegates
         {
             Console.WriteLine(num);
         }
+
+        static void Subscriber1(int num)
+        {
+            Console.WriteLine($"Subscriber1 {num}");
+        }
+
+        static void Subscriber2(int num)
+        {
+            Console.WriteLine($"Subscriber2 {num}");
+        }
     }
 
     public class DelegateExample
     {
         public delegate void CallBackDel(int num);
+        public event CallBackDel Publisher = null;
         public void LogRunningProc(CallBackDel callBack)
         {
             for (int i = 0; i < 100; i++)
             {
                 callBack(i + 1);
+            }
+        }
+
+        public void LogRunningProc()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                Publisher(i + 1);
             }
         }
     }
