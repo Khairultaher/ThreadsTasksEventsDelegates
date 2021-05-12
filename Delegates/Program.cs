@@ -55,5 +55,23 @@ namespace Delegates
                 Publisher(i + 1);
             }
         }
+
+        public int Abc(int a, int b)
+        {
+            return a + b;
+        }
+        public int Abc(int a, int b, int c)
+        {
+            return a + b + c;
+        } 
+        public string  Abc(string a, string b)
+        {
+            return a + b;
+        }
+
+        //public int Abc(string a, string b)
+        //{
+        //    return 1;
+        //}
     }
 }
